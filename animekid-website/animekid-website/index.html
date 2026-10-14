@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AnimeKid - Hoạt hình cho bé</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="AnimeKid trang chủ">
+      <span class="brand-icon">▶</span>
+      <span><strong>Anime<span>Kid</span></strong><small>Thế giới hoạt hình cho bé</small></span>
+    </a>
+    <nav class="head-link" aria-label="Điều hướng chính">
+      <a class="active" href="#home">Trang chủ</a>
+      <a href="#new">Phim mới</a>
+      <a href="#popular">Phổ biến</a>
+      <a href="#categories">Thể loại</a>
+    </nav>
+    <label class="search-box">
+      <span>⌕</span>
+      <input id="searchInput" type="search" placeholder="Tìm kiếm phim..." aria-label="Tìm kiếm phim">
+    </label>
+  </header>
+
+  <main id="home" class="layout">
+    <aside class="left-content" id="categories">
+      <h2>☷ Danh sách phim</h2>
+      <button class="category selected" data-category="all">▦ <span>Tất cả phim</span></button>
+      <button class="category" data-category="Việt Nam">☆ <span>Thuyết minh Việt</span></button>
+      <button class="category" data-category="Phiêu lưu">✦ <span>Phiêu lưu</span></button>
+      <button class="category" data-category="Hài hước">☻ <span>Hài hước</span></button>
+      <button class="category" data-category="Giáo dục">◆ <span>Giáo dục</span></button>
+      <hr>
+      <h3>Phim được xem nhiều</h3>
+      <div class="popular-mini">
+        <div class="mini-art blue">🐱</div><div><b>Doraemon</b><small>1.2M lượt xem</small></div>
+      </div>
+      <div class="popular-mini">
+        <div class="mini-art orange">🧒</div><div><b>Shin - Cậu bé bút chì</b><small>980K lượt xem</small></div>
+      </div>
+      <div class="popular-mini">
+        <div class="mini-art purple">🐼</div><div><b>Kung Fu Panda</b><small>620K lượt xem</small></div>
+      </div>
+      <p class="sidebar-note">Nội dung được chọn lọc cho gia đình.</p>
+    </aside>
+
+    <section class="right-content">
+      <section class="featured">
+        <div class="video-wrap">
+          <div class="video-frame">
+            <iframe id="mainVideo"
+              src="https://www.youtube-nocookie.com/embed/aqz-KE-bpKQ?rel=0"
+              title="Video hoạt hình mẫu Big Buck Bunny"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+          <p class="video-caption">Video mẫu hoạt hình · Có thể phát trực tiếp trong trang</p>
+        </div>
+        <div class="film-info">
+          <span class="pill blue-pill">HD / Full HD</span>
+          <span class="pill green-pill">Hoạt hình</span>
+          <h1 id="featuredTitle">Big Buck Bunny - Chuyến phiêu lưu vui nhộn</h1>
+          <p>Một video hoạt hình mẫu để minh họa cách nhúng phim và xây dựng giao diện xem trực tuyến. Hãy chọn một phim bên dưới để đổi nội dung trình phát.</p>
+          <ul class="details">
+            <li>◷ <span>Thời lượng:</span> video mẫu</li>
+            <li>▣ <span>Chất lượng:</span> tùy nguồn phát</li>
+            <li>♬ <span>Ngôn ngữ:</span> kiểm tra theo video</li>
+          </ul>
+          <button class="primary-button" id="playButton">▶ Xem phim</button>
+          <p class="notice">Lưu ý: Video nhúng từ YouTube có thể chứa quảng cáo do YouTube kiểm soát. Muốn đảm bảo không quảng cáo, hãy dùng video tự sở hữu/được cấp phép và phát bằng thẻ video.</p>
+        </div>
+      </section>
+
+      <section class="catalog" id="new">
+        <div class="section-heading">
+          <h2>✨ Có thể bạn sẽ thích</h2>
+          <div class="sort-tools">
+            <label for="sortSelect">Sắp xếp:</label>
+            <select id="sortSelect">
+              <option value="views">Nhiều lượt xem</option>
+              <option value="newest">Mới cập nhật</option>
+            </select>
+          </div>
+        </div>
+        <div class="movie-grid" id="movieGrid">
+          <article class="movie-card" data-title="Big Buck Bunny" data-category="Phiêu lưu" data-views="1200000" data-date="2025-06-01" data-video="aqz-KE-bpKQ" data-color="green">
+            <button class="poster green" aria-label="Xem Big Buck Bunny"><span>🐰</span><small>BIG BUCK BUNNY</small></button>
+            <h3>Big Buck Bunny</h3><p>Hoạt hình · 2025</p><small>◉ 1.2M lượt xem</small>
+          </article>
+          <article class="movie-card" data-title="Bunny and Friends" data-category="Hài hước" data-views="980000" data-date="2025-05-15" data-video="aqz-KE-bpKQ" data-color="orange">
+            <button class="poster orange" aria-label="Xem Bunny and Friends"><span>🦊</span><small>BUNNY & FRIENDS</small></button>
+            <h3>Bunny and Friends</h3><p>Hoạt hình · 2025</p><small>◉ 980K lượt xem</small>
+          </article>
+          <article class="movie-card" data-title="Thế giới động vật" data-category="Giáo dục" data-views="760000" data-date="2025-04-20" data-video="aqz-KE-bpKQ" data-color="blue">
+            <button class="poster blue" aria-label="Xem Thế giới động vật"><span>🐳</span><small>THẾ GIỚI ĐỘNG VẬT</small></button>
+            <h3>Thế giới động vật</h3><p>Giáo dục · 2025</p><small>◉ 760K lượt xem</small>
+          </article>
+          <article class="movie-card" data-title="Khu rừng kỳ thú" data-category="Phiêu lưu" data-views="620000" data-date="2025-03-10" data-video="aqz-KE-bpKQ" data-color="purple">
+            <button class="poster purple" aria-label="Xem Khu rừng kỳ thú"><span>🦉</span><small>KHU RỪNG KỲ THÚ</small></button>
+            <h3>Khu rừng kỳ thú</h3><p>Phiêu lưu · 2025</p><small>◉ 620K lượt xem</small>
+          </article>
+          <article class="movie-card" data-title="Bạn mới của chúng ta" data-category="Hài hước" data-views="580000" data-date="2025-02-08" data-video="aqz-KE-bpKQ" data-color="pink">
+            <button class="poster pink" aria-label="Xem Bạn mới của chúng ta"><span>🐻</span><small>BẠN MỚI</small></button>
+            <h3>Bạn mới của chúng ta</h3><p>Hài hước · 2025</p><small>◉ 580K lượt xem</small>
+          </article>
+          <article class="movie-card" data-title="Hành tinh xanh" data-category="Giáo dục" data-views="420000" data-date="2025-01-12" data-video="aqz-KE-bpKQ" data-color="teal">
+            <button class="poster teal" aria-label="Xem Hành tinh xanh"><span>🌎</span><small>HÀNH TINH XANH</small></button>
+            <h3>Hành tinh xanh</h3><p>Giáo dục · 2025</p><small>◉ 420K lượt xem</small>
+          </article>
+        </div>
+        <p id="emptyMessage" class="empty-message" hidden>Không tìm thấy phim phù hợp. Hãy thử từ khóa khác.</p>
+      </section>
+
+      <section class="html-video-demo">
+        <div>
+          <h2>Ví dụ dùng thẻ &lt;video&gt;</h2>
+          <p>Phát một video mẫu trực tiếp bằng HTML5. Nguồn mẫu này chỉ phục vụ minh họa bài tập.</p>
+        </div>
+        <video controls preload="metadata" poster="https://www.w3schools.com/html/pic_trulli.jpg">
+          <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+          Trình duyệt của bạn không hỗ trợ thẻ video.
+        </video>
+      </section>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2025 AnimeKid. Giao diện phục vụ mục đích học tập.</p>
+    <p>Trang web mẫu · Hãy sử dụng nội dung video hợp pháp và phù hợp với trẻ em.</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
